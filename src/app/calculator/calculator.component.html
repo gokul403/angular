@@ -1,0 +1,31 @@
+<p>caluclator works!</p>
+<div style="background-color: rgb(91, 0, 209);
+width: 40%;position: absolute;
+left: 30%;right: 30%;height: 400px;">
+<div *ngIf="operator==''">
+    <input type="text" name="" id="" value="{{value1}}" (input)="setNumber($event)" >
+    </div>
+    <div *ngIf="value1!='' && operator!=''">
+    <input type="text" value={{value2}} (input)="setNumber($event)">
+    </div>
+    
+
+   <div *ngif="value1!='' && operator!='' && value2!='' && sum==''">
+       
+        <input type="text" name="" id="" value="{{sum}}" >
+    </div>
+   
+   
+   
+    
+    <div>
+        <button *ngFor="let i of ['1','2','3']" (click)="setNumber(i)">{{i}}</button></div>
+     <div><button *ngFor="let i of ['4','5','6']" (click)="setNumber(i)">{{i}}</button></div>
+        <button *ngFor="let i of ['7','8','9','0']" (click)="setNumber(i)">{{i}}</button>
+        <div>
+        <button *ngFor="let o of ['+','-','*','/']" (click)="setOperators(o)">{{o}}</button>
+        <button (click)="add(operator)">=</button>
+    </div>
+    
+    
+    </div>
