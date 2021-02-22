@@ -1,1 +1,42 @@
-<p>todolist works!</p>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>todolist works!</p>
+    <div class="row">
+        <div class="col-sm-6">
+
+        
+    
+   
+    <input type="text" value="{{value1}}" (input)="setNumber($event)" >
+    <button class="btn btn-primary" (click)="array1()">+</button>
+
+    <div>
+        <li *ngFor="let a of array">
+            {{a}}
+            <button (click)="remove(a)">Delete</button>
+            <button (click)="move(a)" >move</button>
+        </li>
+    </div>
+</div>
+<div class="col-sm-6">
+    <p>Tommarrow</p>
+    <div>
+        <li *ngFor="let a of array2">
+        {{a}}
+        <button (click)="remove2(a)">Delete</button>
+    </li>
+    </div>
+</div>
+   
+</div>
+</body>
+</html>
